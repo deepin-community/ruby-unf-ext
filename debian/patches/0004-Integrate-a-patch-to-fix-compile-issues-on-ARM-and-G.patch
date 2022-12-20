@@ -1,0 +1,40 @@
+From: Akinori MUSHA <knu@idaemons.org>
+Date: Thu, 6 Apr 2017 18:21:03 +0900
+Subject: Integrate a patch to fix compile issues on ARM and GCC 6
+
+Fixes #15.
+---
+ ext/unf_ext/unf/normalizer.hh | 6 +++---
+ ext/unf_ext/unf/table.hh      | 2 +-
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+diff --git a/ext/unf_ext/unf/normalizer.hh b/ext/unf_ext/unf/normalizer.hh
+index b19b99c..d20244b 100644
+--- a/ext/unf_ext/unf/normalizer.hh
++++ b/ext/unf_ext/unf/normalizer.hh
+@@ -17,9 +17,9 @@ namespace UNF {
+ 
+   public:
+     Normalizer()
+-      : nf_d(TABLE::NODES, TABLE::CANONICAL_DECOM_ROOT, TABLE::STRINGS),
+-	nf_kd(TABLE::NODES, TABLE::COMPATIBILITY_DECOM_ROOT, TABLE::STRINGS),
+-	nf_c(TABLE::NODES, TABLE::CANONICAL_COM_ROOT, TABLE::STRINGS),
++      : nf_d(TABLE::NODES, TABLE::CANONICAL_DECOM_ROOT, (const char *)TABLE::STRINGS),
++	nf_kd(TABLE::NODES, TABLE::COMPATIBILITY_DECOM_ROOT, (const char *)TABLE::STRINGS),
++	nf_c(TABLE::NODES, TABLE::CANONICAL_COM_ROOT, (const char *)TABLE::STRINGS),
+ 	nf_c_qc(TABLE::NODES, TABLE::NFC_ILLEGAL_ROOT),
+ 	nf_kc_qc(TABLE::NODES, TABLE::NFKC_ILLEGAL_ROOT),
+ 	ccc(TABLE::NODES, TABLE::CANONICAL_CLASS_ROOT)
+diff --git a/ext/unf_ext/unf/table.hh b/ext/unf_ext/unf/table.hh
+index 2b45703..ecfe147 100644
+--- a/ext/unf_ext/unf/table.hh
++++ b/ext/unf_ext/unf/table.hh
+@@ -6297,7 +6297,7 @@ const unsigned NODES[]={
+ 0xFF000000,0xFF000000,0xFF000000,0xFF000000,0xFF000000,0xFF000000,0xFF000000,0xFF000000,0xFF000000,0xFF000000,
+ 0xFF000000,0xFF000000,0xFF000000,0xFF000000,0xFF000000};
+ 
+-const char STRINGS[]={
++const signed char STRINGS[]={
+  -27,-113, -81, -27, -66,-105, -27,-106, -74, -25,-108, -77, -26, -70,-128, -27,-112,-120, -25, -87,
+  -70, -25, -90,-127, -26,-116,-121, -23,-127,-118, -26,-115,-107, -26,-118,-107, -26, -68,-108, -27,
+ -112, -71, -27, -93, -80, -24, -78, -87, -25, -75,-126, -27,-120, -99, -26,-106, -80, -27, -66,-116,

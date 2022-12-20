@@ -1,0 +1,27 @@
+Source: ruby-unf-ext
+Section: ruby
+Priority: optional
+Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Uploaders: Youhei SASAKI <uwabami@gfd-dennou.org>
+Build-Depends: debhelper-compat (= 13),
+               gem2deb (>= 1.0),
+               rake-compiler,
+               ruby-shoulda,
+               ruby-test-unit
+Standards-Version: 4.6.0
+Vcs-Git: https://salsa.debian.org/ruby-team/ruby-unf-ext.git
+Vcs-Browser: https://salsa.debian.org/ruby-team/ruby-unf-ext
+Homepage: https://github.com/knu/ruby-unf_ext
+Rules-Requires-Root: no
+XS-Ruby-Versions: all
+
+Package: ruby-unf-ext
+Architecture: any
+XB-Ruby-Versions: ${ruby:Versions}
+Depends: ruby | ruby-interpreter,
+         ${misc:Depends},
+         ${shlibs:Depends}
+Description: Unicode Normalization Form support library for CRuby
+ ruby-unf_ext is an unicode normalization library for CRuby.  It provides
+ classes for normalizing UTF-8 strings into and from NFC, NFD, NFKC, NFKD. The
+ results is compliant with Unicode 6.0.

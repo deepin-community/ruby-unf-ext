@@ -1,0 +1,150 @@
+ruby-unf-ext (0.0.7.7-deepin1) unstable; urgency=medium
+
+  * Rebuild
+
+ -- Deepin Packages Builder <packages@deepin.org>  Fri, 11 Nov 2022 18:05:09 +0800
+
+ruby-unf-ext (0.0.7.7-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Debian Janitor ]
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+
+  [ Sruthi Chandran ]
+  * Update minimum version of gem2deb to 1.0
+
+  [ Cédric Boutillier ]
+  * Update team name
+  * Add .gitattributes to keep unwanted files out of the source package
+
+  [ Pirate Praveen ]
+  * New upstream version 0.0.7.7 (used git snapshot for commit 1c21149)
+  * Bump Standards-Version to 4.6.0 (no changes needed)
+  * Bump debhelper compatibility level to 13
+
+ -- Pirate Praveen <praveen@debian.org>  Tue, 14 Sep 2021 01:16:06 +0530
+
+ruby-unf-ext (0.0.7.6-1) unstable; urgency=medium
+
+  [ Utkarsh Gupta ]
+  * Add salsa-ci.yml
+  * Update d/ch
+
+  [ Youhei SASAKI ]
+  * New upstream version 0.0.7.6
+  * d/control: Bump Standard Version 4.5.0
+  * d/{control,compat}: use debhelper-compat
+  * Add d/control: Add Rules-Requires-Root
+
+ -- Youhei SASAKI <uwabami@gfd-dennou.org>  Wed, 12 Feb 2020 10:16:43 +0900
+
+ruby-unf-ext (0.0.7.5-1) unstable; urgency=medium
+
+  * New upstream version 0.0.7.5
+  * d/watch: use github as upstream due to missing some tests in gem
+  * d/{control,compat}: Bump compat 11
+  * d/control: Bump Standard-Version 4.2.1
+  * d/{copyright,control}: update uri, use https
+  * d/control: Update Vcs-{Git,Browser}. use salsa
+  * add d/tests: enable autopkgtest
+
+ -- Youhei SASAKI <uwabami@gfd-dennou.org>  Sat, 15 Sep 2018 01:35:59 +0900
+
+ruby-unf-ext (0.0.7.4-1) unstable; urgency=medium
+
+  * New upstream version 0.0.7.4
+  * Refresh patches
+  * Bump Standard Version: 4.0.0
+  * Bump debhelper >= 10
+  * Include scripts and data in order to generate
+    "ext/unf_ext/unf/table.hh". (Closes: #859510)
+
+ -- Youhei SASAKI <uwabami@gfd-dennou.org>  Mon, 28 Aug 2017 15:45:04 +0900
+
+ruby-unf-ext (0.0.7.2-3) unstable; urgency=medium
+
+  * Team upload
+  * Apply upstream patch to fix build with GCC 6 on architectures that don't
+    have char signed by default (Closes: #859463)
+
+ -- Antonio Terceiro <terceiro@debian.org>  Tue, 11 Apr 2017 14:48:23 -0300
+
+ruby-unf-ext (0.0.7.2-2) unstable; urgency=medium
+
+  * Team upload.
+  * Apply patch by Chris Lamb to fix reference do dh_installchangelogs
+    (Closes: #831780)
+
+ -- Antonio Terceiro <terceiro@debian.org>  Tue, 19 Jul 2016 08:46:50 -0300
+
+ruby-unf-ext (0.0.7.2-1) unstable; urgency=medium
+
+  * Imported Upstream version 0.0.7.2
+  * Bump Compat: 9
+  * Fix lintian warning: vcs-field-uses-insecure-uri
+  * Add patch: Relace git execution in gemspec
+
+ -- Youhei SASAKI <uwabami@gfd-dennou.org>  Wed, 10 Feb 2016 02:09:24 +0900
+
+ruby-unf-ext (0.0.7.1-1) unstable; urgency=medium
+
+  * Imported Upstream version 0.0.7.1
+  * Bump Standard Version: 3.9.6
+  * Install CHANGELOG.md as upstream changelog
+  * Refresh patches
+  * Update copyright year
+  * Update B-D: add ruby-test-unit
+
+ -- Youhei SASAKI <uwabami@gfd-dennou.org>  Mon, 15 Jun 2015 17:18:58 +0900
+
+ruby-unf-ext (0.0.6-2) unstable; urgency=medium
+
+  * Team upload.
+  * Update Standards-Version to 3.9.5 (no changes)
+  * Update Build-Depends for ruby2.0, drop ruby1.8 (Closes: #725602)
+
+ -- Christian Hofstaedtler <zeha@debian.org>  Sun, 29 Dec 2013 13:29:39 +0100
+
+ruby-unf-ext (0.0.6-1) unstable; urgency=low
+
+  [ Cédric Boutillier ]
+  * debian/control: remove obsolete DM-Upload-Allowed flag
+  * use canonical URI in Vcs-* fields
+  * debian/copyright:
+    + Use DEP5 copyright-format/1.0 official URL for Format field
+
+  [ Youhei SASAKI ]
+  * Imported Upstream version 0.0.6
+  * Drop unused lintian-overrides
+  * Bump Standard Version: 3.9.4
+
+ -- Youhei SASAKI <uwabami@gfd-dennou.org>  Sun, 02 Jun 2013 03:21:52 +0900
+
+ruby-unf-ext (0.0.5-2) unstable; urgency=low
+
+  * Bump build dependency on gem2deb to >= 0.3.0~
+
+ -- Youhei SASAKI <uwabami@gfd-dennou.org>  Tue, 26 Jun 2012 03:04:13 +0900
+
+ruby-unf-ext (0.0.5-1) unstable; urgency=low
+
+  * Imported Upstream version 0.0.5
+  * Update patch handling: use gbp-pq
+  * New patch 0002-Force-using-CXX-instead-of-CC.patch
+  * Add lintian-overrides: hardening-no-fortify-functions
+
+ -- Youhei SASAKI <uwabami@gfd-dennou.org>  Wed, 13 Jun 2012 20:21:58 +0900
+
+ruby-unf-ext (0.0.4-1) unstable; urgency=low
+
+  * New upstream version 0.0.4
+
+ -- Youhei SASAKI <uwabami@gfd-dennou.org>  Fri, 06 Jan 2012 02:49:08 +0900
+
+ruby-unf-ext (0.0.3-1) unstable; urgency=low
+
+  * Initial release (Closes: #648290)
+
+ -- Youhei SASAKI <uwabami@gfd-dennou.org>  Sun, 06 Nov 2011 01:03:28 +0900

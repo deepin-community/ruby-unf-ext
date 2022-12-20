@@ -1,0 +1,20 @@
+From: Youhei SASAKI <uwabami@gfd-dennou.org>
+Date: Wed, 10 Feb 2016 02:08:21 +0900
+Subject: Replace git execution in gemspec
+
+Signed-off-by: Youhei SASAKI <uwabami@gfd-dennou.org>
+---
+ unf_ext.gemspec | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+--- a/unf_ext.gemspec
++++ b/unf_ext.gemspec
+@@ -13,7 +13,7 @@
+   gem.homepage      = "https://github.com/knu/ruby-unf_ext"
+   gem.licenses      = ["MIT"]
+ 
+-  gem.files         = `git ls-files`.split($/)
++  gem.files         = [".document", ".gitignore", ".travis.yml", "CHANGELOG.md", "Gemfile", "LICENSE.txt", "README.md", "Rakefile", "ext/unf_ext/extconf.rb", "ext/unf_ext/unf.cc", "ext/unf_ext/unf/normalizer.hh", "ext/unf_ext/unf/table.hh", "ext/unf_ext/unf/trie/char_stream.hh", "ext/unf_ext/unf/trie/node.hh", "ext/unf_ext/unf/trie/searcher.hh", "ext/unf_ext/unf/util.hh", "lib/unf_ext.rb", "lib/unf_ext/version.rb", "metadata.yml", "test/helper.rb", "test/normalization-test.txt", "test/test_unf_ext.rb", "unf_ext.gemspec"]
+   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
+   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/}).grep(%r{/test_[^/]+\.rb$})
+   gem.require_paths = ["lib"]

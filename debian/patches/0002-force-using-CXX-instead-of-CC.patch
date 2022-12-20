@@ -1,0 +1,23 @@
+From: Youhei SASAKI <uwabami@gfd-dennou.org>
+Date: Wed, 13 Jun 2012 20:19:20 +0900
+Subject: force using g++ instead of gcc
+
+Signed-off-by: Youhei SASAKI <uwabami@gfd-dennou.org>
+---
+ ext/unf_ext/extconf.rb | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+--- a/ext/unf_ext/extconf.rb
++++ b/ext/unf_ext/extconf.rb
+@@ -10,9 +10,9 @@
+ 
+ unless CONFIG['CXX']
+   case CONFIG['CC']
+-  when %r{((?:.*[-/])?)gcc([-0-9.]*)$}
++  when %r{((?:.*[-/])?)gcc([-0-9.]*)\s*?$}
+     cxx = $1 + 'g++' + $2
+-  when %r{((?:.*[-/])?)clang([-0-9.]*)$}
++  when %r{((?:.*[-/])?)clang([-0-9.]*)\s*?$}
+     cxx = $1 + 'clang++' + $2
+   else
+     cxx = CONFIG['CC']

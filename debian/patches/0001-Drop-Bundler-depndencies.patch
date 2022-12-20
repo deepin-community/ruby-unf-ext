@@ -1,0 +1,27 @@
+From: Debian Ruby Extras Maintainers
+ <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Date: Wed, 13 Jun 2012 17:09:19 +0900
+Subject: Drop Bundler depndencies
+
+Signed-off-by: Youhei SASAKI <uwabami@gfd-dennou.org>
+---
+ test/helper.rb | 9 ---------
+ 1 file changed, 9 deletions(-)
+
+diff --git a/test/helper.rb b/test/helper.rb
+index 2f7bd8a..ac27407 100644
+--- a/test/helper.rb
++++ b/test/helper.rb
+@@ -1,12 +1,3 @@
+-require 'rubygems'
+-require 'bundler'
+-begin
+-  Bundler.setup(:default, :development)
+-rescue Bundler::BundlerError => e
+-  $stderr.puts e.message
+-  $stderr.puts "Run `bundle install` to install missing gems"
+-  exit e.status_code
+-end
+ require 'test/unit'
+ 
+ $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))

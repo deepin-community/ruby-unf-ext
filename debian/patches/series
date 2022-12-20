@@ -1,0 +1,4 @@
+0001-Drop-Bundler-depndencies.patch
+0002-force-using-CXX-instead-of-CC.patch
+0003-Replace-git-execution-in-gemspec.patch
+# 0004-Integrate-a-patch-to-fix-compile-issues-on-ARM-and-G.patch
